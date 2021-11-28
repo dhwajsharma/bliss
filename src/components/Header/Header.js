@@ -7,6 +7,7 @@ const Header = () => {
   return (
     <div className="header">
       <img
+        loading="lazy"
         className="header__logo"
         src="https://www.graphicsprings.com/filestorage/stencils/3055581cff0526602142cbb0bfba9fca.png?width=500&height=500"
         alt=""

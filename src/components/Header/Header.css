@@ -42,16 +42,19 @@
 
 .header__optionLineOne {
   font-size: 10px;
+  cursor: pointer;
 }
 
 .header__optionLineTwo {
   font-size: 13px;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .header__optionBasket {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .header__basketCount {
