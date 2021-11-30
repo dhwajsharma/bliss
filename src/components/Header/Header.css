@@ -21,24 +21,32 @@
   flex: 1;
   align-items: center;
   border-radius: 24px;
+  align-items: center;
+  justify-content: center;
 }
 
 .header__searchInput {
-  height: 12px;
   padding: 10px;
   border: none;
   width: 100%;
   background-color: #3d3d3d;
   outline: none;
   color: white;
+  flex: 0.6;
+  opacity: 1;
+  border-radius: 6px;
+  text-align: center;
+  display: flex;
+  border: 1px solid solid;
 }
 
-.header__searchIcon {
-  padding: 5px;
-  height: 22px !important;
-  background-color: #7b78ff;
-  cursor: pointer;
-  margin-right: 20px;
+.header__searchInput > input {
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  min-width: 30vw;
+  outline: none;
+  color: white;
 }
 
 .header__optionLineOne {

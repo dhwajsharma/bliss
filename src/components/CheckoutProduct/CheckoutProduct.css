@@ -30,4 +30,9 @@
   cursor: pointer;
   border-radius: 5px;
   padding: 5px;
+  transition: transform 0.1s ease-in;
+}
+
+.checkoutProduct__info > button:hover {
+  transform: scale(0.95);
 }

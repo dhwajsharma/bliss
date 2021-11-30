@@ -10,11 +10,20 @@
   margin: 10px;
   z-index: 1;
   background-color: #161616;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.product:hover {
+  transform: scale(1.05);
 }
 
 .product__info {
   height: 100px;
   margin-bottom: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .product__price {
@@ -39,4 +48,9 @@
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
+  transition: transform 0.1s ease-in;
+}
+
+.product > button:hover {
+  transform: scale(0.95);
 }

@@ -5,9 +5,11 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
+import { useNavigate } from "react-router";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
+  let navigate = useNavigate();
 
   const handleAuthentication = () => {
     if (user) {
@@ -27,8 +29,11 @@ const Header = () => {
       </Link>
 
       <div className="header__search">
-        <input className="header__searchInput" type="text" />
-        <SearchIcon className="header__searchIcon" />
+        <input
+          className="header__searchInput"
+          type="text"
+          placeholder="Search"
+        />
       </div>
 
       <div className="header__nav">
@@ -42,7 +47,7 @@ const Header = () => {
             </span>
           </div>
         </Link>
-        <div className="header__option">
+        <div className="header__option" onClick={(e) => navigate("/payment")}>
           <span className="header__optionLineOne">Returns</span>
           <span className="header__optionLineTwo">& Orders</span>
         </div>
