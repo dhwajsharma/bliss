@@ -1,9 +1,11 @@
 import React from "react";
 import "./Product.css";
 import { useStateValue } from "../../StateProvider";
+import { useNavigate } from "react-router";
 
 const Product = ({ id, title, image, price, rating }) => {
   const [{ basket }, dispatch] = useStateValue();
+  let navigate = useNavigate();
 
   const addToBasket = () => {
     // dispatch the item into the data layer

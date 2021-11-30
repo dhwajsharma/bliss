@@ -88,3 +88,9 @@
   text-decoration: none;
   color: white;
 }
+
+@media only screen and (min-width: 360px) and (max-width: 928px) {
+  .header__searchInput {
+    display: none;
+  }
+}
