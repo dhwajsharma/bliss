@@ -8,6 +8,11 @@
   z-index: 100;
 }
 
+.header > h2 {
+  margin-left: 30px;
+  font-weight: bold;
+}
+
 .header__logo {
   width: 70px;
   object-fit: contain;

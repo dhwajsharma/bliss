@@ -16,7 +16,16 @@ const Footer = () => {
         <div className="footer__right">
           <h1>Connect with us</h1>
           <ul>
-            <li>GitHub</li>
+            <li>
+              {" "}
+              <a
+                href="https://github.com/dhwajsharma/shopping-cart"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </li>
             <li>Twitter</li>
             <li>LinkedIn</li>
           </ul>

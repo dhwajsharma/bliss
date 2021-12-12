@@ -27,6 +27,7 @@ const Header = () => {
           alt=""
         />
       </Link>
+      <h2>Bliss</h2>
 
       <div className="header__search">
         <input

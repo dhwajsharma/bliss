@@ -21,6 +21,12 @@
   margin-left: 200px;
 }
 
+.footer__right > ul > li > a {
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
 .footer__right > ul {
   font-size: 20px;
 }
