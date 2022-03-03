@@ -30,8 +30,9 @@ const Payment = () => {
             <h3>Review items and Delivery</h3>
           </div>
           <div className="payment__items">
-            {basket.map((item) => (
+            {basket.map((item, key) => (
               <CheckoutProduct
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}

@@ -21,8 +21,9 @@ const Checkout = () => {
           <h3>Hello, {user?.email}</h3>
           <h2 className="check__title">Your Cart</h2>
 
-          {basket.map((item) => (
+          {basket.map((item, key) => (
             <CheckoutProduct
+              key={item.id}
               id={item.id}
               title={item.title}
               image={item.image}

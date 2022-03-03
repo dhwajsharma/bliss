@@ -40,7 +40,7 @@ const Home = () => {
                   return val;
                 }
               })
-              .map((product) => (
+              .map((product, key) => (
                 <Product
                   key={product.id}
                   id={product.id}
