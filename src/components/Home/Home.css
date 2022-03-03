@@ -13,6 +13,7 @@
 .home__container {
   display: flex;
   flex-direction: column;
+  min-width: 1500px;
 }
 
 .home__image {
