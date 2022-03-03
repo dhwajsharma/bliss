@@ -18,12 +18,10 @@ const Payment = () => {
 
         <div className="payment__section">
           <div className="payment__title">
-            <h3>Delivery Address</h3>
+            <h3>Email</h3>
           </div>
           <div className="payment__address">
             <p>{user?.email}</p>
-            <p>B-340, 10-B Scheme</p>
-            <p>Jaipur, Rajasthan</p>
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { auth } from "../../firebase";
 import { useNavigate } from "react-router";
+import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import Product from "../Product/Product";
 
 const Header = () => {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -19,22 +21,18 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Link to="/">
-        <img
-          loading="lazy"
-          className="header__logo"
-          src="https://www.graphicsprings.com/filestorage/stencils/3055581cff0526602142cbb0bfba9fca.png?width=500&height=500"
-          alt=""
-        />
-      </Link>
-      <h2>Bliss</h2>
-
-      <div className="header__search">
-        <input
-          className="header__searchInput"
-          type="text"
-          placeholder="Search"
-        />
+      <div className="header__left">
+        <Link to="/">
+          <img
+            loading="lazy"
+            className="header__logo"
+            src="https://www.graphicsprings.com/filestorage/stencils/3055581cff0526602142cbb0bfba9fca.png?width=500&height=500"
+            alt=""
+          />
+        </Link>
+        <Link to="/">
+          <h2 style={{ color: "white", textDecoration: "none" }}>Bliss</h2>
+        </Link>
       </div>
 
       <div className="header__nav">
