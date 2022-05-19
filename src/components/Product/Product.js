@@ -1,28 +1,28 @@
 import React from "react";
 import "./Product.css";
-import { useStateValue } from "../../StateProvider";
 import { useNavigate } from "react-router";
+import { selectPost } from "../../features/postSlice";
+import { useDispatch } from "react-redux";
 
 const Product = ({ id, title, image, price, rating }) => {
-  const [{ basket }, dispatch] = useStateValue();
   let navigate = useNavigate();
+  const Dispatch = useDispatch();
 
-  const addToBasket = () => {
-    // dispatch the item into the data layer
-    dispatch({
-      type: "ADD_TO_BASKET",
-      item: {
+  const openPost = () => {
+    Dispatch(
+      selectPost({
         id: id,
         title: title,
         image: image,
         price: price,
         rating: rating,
-      },
-    });
+      })
+    );
+    navigate("/productPage");
   };
 
   return (
-    <div className="product">
+    <div className="product" onClick={openPost}>
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -33,13 +33,12 @@ const Product = ({ id, title, image, price, rating }) => {
           {Array(rating)
             .fill()
             .map((_, i) => (
-              <p>⭐</p>
+              <p key={i}>⭐</p>
             ))}
         </div>
       </div>
 
       <img src={image} alt="" />
-      <button onClick={addToBasket}>Add to Cart</button>
     </div>
   );
 };

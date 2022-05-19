@@ -1,6 +1,8 @@
 export const initialState = {
   basket: [],
   user: null,
+  selectPost: null,
+  postIsOpen: false,
 };
 
 // Selector
