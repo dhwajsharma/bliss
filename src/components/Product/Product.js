@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 import { selectPost } from "../../features/postSlice";
 import { useDispatch } from "react-redux";
 
-const Product = ({ id, title, image, price, rating }) => {
+const Product = ({ id, title, image, price, email }) => {
   let navigate = useNavigate();
   const Dispatch = useDispatch();
 
@@ -15,7 +15,7 @@ const Product = ({ id, title, image, price, rating }) => {
         title: title,
         image: image,
         price: price,
-        rating: rating,
+        email: email,
       })
     );
     navigate("/productPage");
@@ -29,13 +29,6 @@ const Product = ({ id, title, image, price, rating }) => {
           <small>$</small>
           <strong>{price}</strong>
         </p>
-        <div className="product__rating">
-          {Array(rating)
-            .fill()
-            .map((_, i) => (
-              <p key={i}>⭐</p>
-            ))}
-        </div>
       </div>
 
       <img src={image} alt="" />

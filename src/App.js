@@ -4,12 +4,13 @@ import Home from "./components/Home/Home";
 import { Routes, Route } from "react-router-dom";
 import Checkout from "./components/Checkout/Checkout";
 import Login from "./components/Login/Login";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import Payment from "./components/Payment/Payment";
 import ProductPage from "./components/ProductPage/ProductPage";
 import Footer from "./components/Footer/Footer";
+import { useDispatch, useSelector } from "react-redux";
 
 function App() {
   const [{}, dispatch] = useStateValue();

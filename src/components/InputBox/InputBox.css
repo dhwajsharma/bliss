@@ -1,0 +1,76 @@
+.inputBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputBox__searchBar {
+    display: flex;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 25px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.inputBox__inputContainer {
+    display: flex;
+    align-items: center;
+}
+
+.inputBox__inputContainer>input {
+    flex-grow: 1;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.inputBox__photo {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    flex-grow: inherit;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.inputBox__photo:hover {
+    background-color: gray;
+}
+
+.inputBox__searchBar__removeImage {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.inputBox__searchBar__removeImage:hover {
+    brightness: 0.5;
+    cursor: pointer;
+}
+
+.inputBox__searchBar__removeImage>img {
+    height: 30px;
+    object-fit: contain;
+}
+
+.inputBox__searchBar__removeImage>p {
+    font-size: 15px;
+    color: rgb(165, 17, 17);
+    text-align: center;
+}
+
+.inputBox__dialog {
+    background-color: black !important;
+}
+
+.inputBox__searchBar__removeImage {
+    margin: 0 auto;
+}
